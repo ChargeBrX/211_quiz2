@@ -1,11 +1,11 @@
 #include <stdio.h>
 int main()
 {
-    long int n,i,j,x=0,t,z;
+    int n,i,j,x=0,t,z;
 
     scanf("%d",&n);
 
-    long int a[n],b[n];
+    int a[n],b[n];
     a[0] = 1;
 
     for(i=2,t=1;t<n;i++)
@@ -13,7 +13,7 @@ int main()
         x = 0;
         for(j=2;j<=n;j++)
         {
-            if(i==j*j*j)
+            if(i%(j*j*j)==0)
             {
                 x = 1;
                 break;
@@ -29,7 +29,7 @@ int main()
     {
         if(n==a[i])
         {
-            printf("%ld",i+1);
+            printf("%d",i+1);
             x = 1;
             break;
         }
