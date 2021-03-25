@@ -17,7 +17,7 @@ int main()
         x = 0;
         for(j=0;j<n;j++)
         {
-            if(i%b[j]==0)
+            if(i==b[j])
             {
                 x = 1;
                 break;
