@@ -25,11 +25,11 @@ int main()
             t++;
         }
     }
-    for(i=0;i<n;i++)
+    for(i=1;i<=n;i++)
     {
-        if(n==a[i])
+        if(n==a[i-1])
         {
-            printf("%d",i+1);
+            printf("%d",i);
             x = 1;
             break;
         }
