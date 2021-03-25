@@ -1,15 +1,15 @@
 #include <stdio.h>
 int main()
 {
-    int n,i,j,x=0,t,z,b=1;
+    int n,i,j,x=0,t,z;
 
     scanf("%d",&n);
 
-    int a[n];
+    int a[n+1];
 
-    a[0] = 1;
+    a[1] = 1;
 
-    for(i=2,t=1;t<n;i++)
+    for(i=2,t=2;t<=n;i++)
     {
         for(j=2;j<i;j++)
         {
@@ -27,20 +27,20 @@ int main()
         }
         x=0;
     }
-    for(i=0;i<n;i++)
+    for(i=1;i<=n;i++)
     {
         if(n==a[i])
         {
-            printf("%d",i+1);
-            b = 1;
+            printf("%d",i);
+            x = 1;
             break;
         }
         else
         {
-            b = 0;
+            x = 0;
         }
     }
-    if(b == 0)
+    if(x == 0)
     {
         printf("Not Cube Free");
     }
