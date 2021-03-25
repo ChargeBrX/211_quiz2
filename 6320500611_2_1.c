@@ -1,11 +1,11 @@
 #include <stdio.h>
 int main()
 {
-    int n,i,j,x=0,t,z;
+    long int n,i,j,x=0,t,z;
 
     scanf("%d",&n);
 
-    int a[n],b[n];
+    long int a[n],b[n];
     a[0] = 1;
 
     for(i=2,t=1;t<n;i++)
@@ -29,7 +29,7 @@ int main()
     {
         if(n==a[i])
         {
-            printf("%d",i+1);
+            printf("%ld",i+1);
             x = 1;
             break;
         }
