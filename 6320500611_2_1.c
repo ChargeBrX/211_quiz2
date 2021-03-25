@@ -5,44 +5,17 @@ int main()
 
     scanf("%d",&n);
 
-    int a[n+1];
+    int a[n],b[n];
+    a[0] = 1;
 
-    a[1] = 1;
+    for(i=2;i<=n+1;i++)
+    {
+        b[i-2] = i*i*i;
+        printf("%d ",b[i-2]);
+    }
 
-    for(i=2,t=2;t<=n;i++)
-    {
-        for(j=2;j<i;j++)
-        {
-            z = j*j*j;
-            if(i%z==0)
-            {
-                x = 1;
-                break;
-            }
-        }
-        if(x==0)
-        {
-            a[t] = i;
-            t++;
-        }
-        x=0;
-    }
-    for(i=1;i<=n;i++)
-    {
-        if(n==a[i])
-        {
-            printf("%d",i);
-            x = 1;
-            break;
-        }
-        else
-        {
-            x = 0;
-        }
-    }
-    if(x == 0)
-    {
-        printf("Not Cube Free");
-    }
+
+
+
     return 0;
 }
