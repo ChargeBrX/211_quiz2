@@ -47,8 +47,5 @@ int main()
         printf("Not Cube Free");
     }
 
-
-
-
     return 0;
 }
