@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int n,i,j,x=0,t;
+    int n,i,j,x=0,t,z,b=1;
 
     scanf("%d",&n);
 
@@ -11,19 +11,16 @@ int main()
 
     for(i=2,t=1;t<n;i++)
     {
-        for(j=2;j<=i;)
+        for(j=2;j<i;j++)
         {
-            if(i%j==0)
+            z = j*j*j;
+            if(i%z==0)
             {
-                x++;
-            }
-            else
-            {
-                x = 0;
-                j++;
+                x = 1;
+                break;
             }
         }
-        if(x!=3)
+        if(x==0)
         {
             a[t] = i;
             t++;
@@ -32,6 +29,20 @@ int main()
     }
     for(i=0;i<n;i++)
     {
-         printf("%d ",a[i]);
+        if(n==a[i])
+        {
+            printf("%d",i+1);
+            b = 1;
+            break;
+        }
+        else
+        {
+            b = 0;
+        }
     }
+    if(b == 0)
+    {
+        printf("Not Cube Free");
+    }
+
 }
