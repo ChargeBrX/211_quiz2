@@ -8,16 +8,12 @@ int main()
     int a[n],b[n];
     a[0] = 1;
 
-    for(i=2;i<=n+1;i++)
-    {
-        b[i-2] = i*i*i;
-    }
     for(i=2,t=1;t<n;i++)
     {
         x = 0;
-        for(j=0;j<n;j++)
+        for(j=2;j<=n;j++)
         {
-            if(i==b[j])
+            if(i==j*j*j)
             {
                 x = 1;
                 break;
