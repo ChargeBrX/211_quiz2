@@ -11,7 +11,40 @@ int main()
     for(i=2;i<=n+1;i++)
     {
         b[i-2] = i*i*i;
-        printf("%d ",b[i-2]);
+    }
+    for(i=2,t=1;t<n;i++)
+    {
+        x = 0;
+        for(j=0;j<n;j++)
+        {
+            if(i%b[j]==0)
+            {
+                x = 1;
+                break;
+            }
+        }
+        if(x==0)
+        {
+            a[t] = i;
+            t++;
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        if(n==a[i])
+        {
+            printf("%d",i+1);
+            x = 1;
+            break;
+        }
+        else
+        {
+            x = 0;
+        }
+    }
+    if(x==0)
+    {
+        printf("Not Cube Free");
     }
 
 
